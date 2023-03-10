@@ -31,5 +31,9 @@ img{
 .item-image,
 input {
     display: none;
+}  
+.accordeon-menu_item:hover   .item-image{
+    display: block;
+    width: 150px;
+    height: 150px;
 }
- 
