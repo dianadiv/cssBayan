@@ -1,0 +1,35 @@
+.wrapper{
+    width: 100%; 
+}
+.accordeon-menu{
+    max-width: 40%;
+    margin: 0 auto;
+}
+.accordeon-menu_item{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin: 0 auto;
+     border-top: 2px solid pink;
+     margin-top: 20px;
+     padding: 10px;
+}
+img{
+    width: 70%;
+    
+}
+.item-block{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.close{
+    width: 20px;
+    height: 20px;
+}
+.item-image,
+input {
+    display: none;
+}
+ 
