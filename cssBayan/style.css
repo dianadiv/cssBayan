@@ -4,6 +4,9 @@ body{
     font-size: medium;
     color: blue;
 }
+.fa{
+    color: black;
+}
 .wrapper{
     width: 100%; 
 }
@@ -31,9 +34,13 @@ img{
     justify-content: space-between;
     width: 100%;
 }
-.close{
+/*.close{
     width: 0;
-    height: 0;
+    height: 0; 
+}*/
+.fa,
+.fa-times{
+     display:  none  !important;
 }
 .item-image{
     width: 0;
@@ -57,25 +64,39 @@ img{
     transition: 0.5s;
 }
 .accordeon-menu_item input[type="radio"]:checked ~ .item-image {
+    display: block;
     width: 150px;
     height: 150px;
 }
 .accordeon-menu_item input[type="radio"]:checked ~ .item-block .item-title {
     color:black;
 }
-.wrapper :hover .close{
+/*.wrapper :hover .close{
     width: 20px;
     height: 20px; 
     transition: 0.5s;
-} 
+} */
+.wrapper :hover .fa{
+    display: block !important;
+    width: 20px;
+    height: 20px; 
+    transition: 0.5s;
+}
 .wrapper :hover .item-title {
     color:black;
 }
-.accordeon-menu :hover .close{
+/*.accordeon-menu :hover .close{
     transform: rotate(45deg);
-}
-.item-image :hover .close{
+}*/
+.accordeon-menu :hover .fa{
     transform: rotate(45deg);
 }
 
+/*.item-image :hover .close{
+    transform: rotate(45deg);
+}*/
+.accordeon-menu_item:active .item-block .fa,
+.accordeon-menu_item:active .item-block .item-title{
+    color: blue;
+}
  
