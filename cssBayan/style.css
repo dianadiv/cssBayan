@@ -1,6 +1,6 @@
 body{
     font-family: Arial, Helvetica, sans-serif; 
-    font-size: medium;
+    font-size:  1vw;
     color: blue;
 }
 .fa{
@@ -62,12 +62,12 @@ img{
     height: 40%;
     transition: 0.5s;
 }
-.accordeon-menu_item input[type="radio"]:checked ~ .item-image {
+.accordeon-menu_item  input[type="radio"]:checked ~   .item-image {
     display: block;
     width: 40%;
     height: 40%;
 }
-.accordeon-menu_item input[type="radio"]:checked ~ .item-block .item-title {
+.accordeon-menu_item  input[type="radio"]:checked ~ .item-block .item-title {
     color:black;
 }
 /*.wrapper :hover .close{
