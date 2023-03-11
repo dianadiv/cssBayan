@@ -1,11 +1,10 @@
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif; 
     font-size: medium;
     color: blue;
 }
 .fa{
-    color: black;
+    color: black; 
 }
 .wrapper{
     width: 100%; 
@@ -21,9 +20,9 @@ body{
      justify-content: center;
      align-items: center;
      margin: 0 auto;
-     border-top: 2px solid pink;
-     margin-top: 20px;
-     padding: 10px;
+     border-top: 0.3vh solid pink;
+     margin-top: 1em;
+     padding: 1em;
 }
 img{
     width: 70%;
@@ -39,7 +38,7 @@ img{
     height: 0; 
 }*/
 .fa,
-.fa-times{
+.fa-times{ 
      display:  none  !important;
 }
 .item-image{
@@ -59,14 +58,14 @@ img{
 }
 .accordeon-menu :hover .item-image {
     display: block;
-    width: 150px;
-    height: 150px;
+    width: 40%;
+    height: 40%;
     transition: 0.5s;
 }
 .accordeon-menu_item input[type="radio"]:checked ~ .item-image {
     display: block;
-    width: 150px;
-    height: 150px;
+    width: 40%;
+    height: 40%;
 }
 .accordeon-menu_item input[type="radio"]:checked ~ .item-block .item-title {
     color:black;
@@ -77,10 +76,8 @@ img{
     transition: 0.5s;
 } */
 .wrapper :hover .fa{
-    display: block !important;
-    width: 20px;
-    height: 20px; 
-    transition: 0.5s;
+    display: block !important;   
+
 }
 .wrapper :hover .item-title {
     color:black;
@@ -89,7 +86,7 @@ img{
     transform: rotate(45deg);
 }*/
 .accordeon-menu :hover .fa{
-    transform: rotate(45deg);
+    transform: rotate(45deg); 
 }
 
 /*.item-image :hover .close{
@@ -97,6 +94,6 @@ img{
 }*/
 .accordeon-menu_item:active .item-block .fa,
 .accordeon-menu_item:active .item-block .item-title{
-    color: blue;
+    color: blue; 
 }
  
