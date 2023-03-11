@@ -4,6 +4,7 @@
 .accordeon-menu{
     max-width: 40%;
     margin: 0 auto;
+    cursor: pointer;
 }
 .accordeon-menu_item{
      display: flex;
@@ -25,15 +26,30 @@ img{
     width: 100%;
 }
 .close{
-    width: 20px;
-    height: 20px;
-}
-.item-image,
-input {
     display: none;
+}
+.item-image{
+    display: none;
+     
 }  
-.accordeon-menu_item:hover   .item-image{
+.menu-input{
+    width: 0px;
+    height: 0px;
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+}
+.menu-input:hover ~ .item-image {
     display: block;
     width: 150px;
     height: 150px;
+    transition: opacity 1s ease-in-out;
+}
+.accordeon-menu :hover + .close{
+    display: block;
+    width: 20px;
+    height: 20px; 
+}
+.accordeon-menu_item input[type="radio"]:checked + .item-block .close {
+    transform: rotate(45deg);
 }
