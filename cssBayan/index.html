@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="normalize.css">
     <style>
-        .wrapper{
+      body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: medium;
+    color: blue;
+}
+.wrapper{
     width: 100%; 
 }
 .accordeon-menu{
@@ -36,10 +42,12 @@ img{
     width: 100%;
 }
 .close{
-    display: none;
+    width: 0;
+    height: 0;
 }
 .item-image{
-    display: none;
+    width: 0;
+    height: 0;
      
 }  
 .menu-input{
@@ -49,27 +57,43 @@ img{
     -webkit-appearance: none;
     position: absolute;
 }
-.menu-input:hover ~ .item-image {
+.accordeon-menu :hover {
+    cursor: pointer; 
+}
+.accordeon-menu :hover .item-image {
     display: block;
     width: 150px;
     height: 150px;
-    transition: opacity 1s ease-in-out;
+    transition: 0.5s;
 }
-.accordeon-menu :hover + .close{
-    display: block;
+.accordeon-menu_item input[type="radio"]:checked ~ .item-image {
+    width: 150px;
+    height: 150px;
+}
+.accordeon-menu_item input[type="radio"]:checked ~ .item-block .item-title {
+    color:black;
+}
+.wrapper :hover .close{
     width: 20px;
     height: 20px; 
+    transition: 0.5s;
+} 
+.wrapper :hover .item-title {
+    color:black;
 }
-.accordeon-menu_item:active .close {
+.accordeon-menu :hover .close{
+    transform: rotate(45deg);
+}
+.item-image :hover .close{
     transform: rotate(45deg);
 }
     </style>
 </head>
-<body>
+<body> 
     <div class="wrapper">
         <div class="accordeon-menu">
             <div class="accordeon-menu_item">
-                <input class="menu-input" type="radio" name="menu-item1" id="menu-item1" >
+                <input class="menu-input" type="radio" name="menu-item1" id="menu-item1" checked="checked">
                 <div class="item-block">
                     <label for="menu-item1" class ="item-title">You cant just copy and paste CSS</label>
                     <img class="close" src="img/plus-solid.svg" alt="Close"> 
@@ -91,7 +115,7 @@ img{
                     <img class="close" src="img/plus-solid.svg" alt="Close">
                 </div>
                 <img class="item-image" src="img/9260a5f97f1cfb597a03ed981c2ad688.jpg" alt="Mem">
-            </div>
+            </div>    
             <div class="accordeon-menu_item">
                 <input class="menu-input" type="radio" name="menu-item4" id="menu-item4">
                 <div class="item-block">
@@ -109,6 +133,6 @@ img{
                 <img class="item-image" src="img/9260a5f97f1cfb597a03ed981c2ad688.jpg" alt="Mem">
             </div>
         </div>
-    </div>
+    </div> 
 </body>
 </html>
